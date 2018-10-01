@@ -98,3 +98,8 @@ Após os repositórios estarem clonados pelos atalhos do Vagrant, você terá qu
 Caso deseje clonar os repositórios sem utilizar o atalho do Vagrant, crie as pastas conforme mostrado na hierarquia acima. No SourceTree clique em + e depois em Clone. Coloque o endereço do repositório disponível no GitLab (exemplo: http://gitlab.oderco.com.br/ti/vagrant.git) em Source Path/ URL; Em Destination Path coloque selecione a pasta correta (exemplo D:\dev\vagrant); Clique em Clone.
 
 > **Importante**: Ao clonar um repositório, a branch a ser utilizada será o "develop". Recomendamos a utilização do Git Flow para criar e finalizar branchs (features). Antes de finalizar sua feature (mesclar sua branch para a develop), SEMPRE entre primeiro na na develop, de um pull, entre na sua branch, mescle a develop para sua branch, só assim finalize pelo Git Flow ou mescle sua branch para a develop.
+
+--------------
+
+#English version
+//TODO: write english version of readme.md
