@@ -98,3 +98,111 @@ Após os repositórios estarem clonados pelos atalhos do Vagrant, você terá qu
 Caso deseje clonar os repositórios sem utilizar o atalho do Vagrant, crie as pastas conforme mostrado na hierarquia acima. No SourceTree clique em + e depois em Clone. Coloque o endereço do repositório disponível no GitLab (exemplo: http://gitlab.oderco.com.br/ti/vagrant.git) em Source Path/ URL; Em Destination Path coloque selecione a pasta correta (exemplo D:\dev\vagrant); Clique em Clone.
 
 > **Importante**: Ao clonar um repositório, a branch a ser utilizada será o "develop". Recomendamos a utilização do Git Flow para criar e finalizar branchs (features). Antes de finalizar sua feature (mesclar sua branch para a develop), SEMPRE entre primeiro na na develop, de um pull, entre na sua branch, mescle a develop para sua branch, só assim finalize pelo Git Flow ou mescle sua branch para a develop.
+
+
+# Ensligh version
+
+
+Welcome to Vagrant
+===================
+
+In this tutorial there are the information to get start working with local running apps, with same settings of production.
+
+Instalations for versioning
+-------------
+
+To get start with git, first of all you have to download and install these programs:
+
+#### GIT
+
+- Go to https://git-scm.com/download/win 
+- Download "64-bit Git for Windows Setup" version
+
+#### SouceTree
+- Go to https://www.sourcetreeapp.com/ 
+- Download and install
+
+Instalations for virtualization
+-------------
+
+To run versioned systems with these tools in your machine, you need to install the following programs:
+
+#### VirtualBox
+
+- Go to https://www.virtualbox.org/wiki/Downloads :
+- Download "VirtualBox 5.1.26 platform packages -> Windows hosts" and install
+- Download "VirtualBox 5.1.26 Oracle VM VirtualBox Extension Pack -> All supported platforms" and install
+
+#### Vagrant
+
+- Go to https://www.vagrantup.com/downloads.html 
+- Download windows version and install
+
+#### HostSwitcher
+
+- Go to  https://www.red-gate.com/simple-talk/wp-content/plugins/download-attachments/includes/download.php?id=58475
+- Download and install. If the file comes without extension, just open it like a zip file;
+- HostSwitcher Settings -> Click "Open Host File" and replace hosts.txt with the one that is in the repository
+
+> **Tip:** If you use chrome, download "Website IP" extension to know if the IP you are in (dev or prod).
+
+File three
+-------------
+
+After clone the repository the following folders will be at D:/, as the hierarchy:
+
+ - dev
+	 - [vagrant](http://gitlab.oderco.com.br/ti/vagrant)
+	 - centos7-php56
+		 - [salesforce](http://gitlab.oderco.com.br/ti/salesforce)
+		 - [rma](http://gitlab.oderco.com.br/ti/rma)
+		 - seguranca
+		 - [services](http://gitlab.oderco.com.br/ti/services)
+	 - centos7-php7
+		 - [magento3](http://gitlab.oderco.com.br/ti/magento)
+
+Then you can clone the repository as the links above or use file links into each folder in each VM in vagrant repository, who will clone esach folder into relative folder in the machine.
+
+Let's start! => TODO: continue the translation
+-------------
+
+Primeiramente você precisará apenas criar a pasta D:\dev\vagrant e clonar o repositório utilizando o SourceTree (vide mais abaixo como fazer). Depois faça o seguinte:
+
+#### Utilizando o HostSwitcher
+
+Abra o HostSwitcher, clique com o botão direito do mouse e selecione "Open HOSTS file". No arquivo que abrir, copie e cole no final o conteúdo de D:\dev\vagrant\hosts.txt, salve e feche.
+
+Ao clicar nele novamente, você verá os nomes dos sistemas os quais você poderá alternar para Development ou Production, bastando desse modo utilizar o mesmo DNS dos sistemas para acessá-los em ambos os ambientes.
+
+#### Utilizando os Atalhos do Vagrant
+
+Na barra de tarefas do Windows clique com o botão direito e vá em "Barra de ferramentas" e em "Nova barra de ferramentas...". Na tela que abrir selecione a pasta D:\dev\vagrant e clique em "Selecionar pasta". A pasta ficará de fácil acesso na barra de ferramentas.
+
+Desse modo você poderá acessar os atalhos, clonar os repositórios e iniciar a máquina virtual.
+
+> **Exemplo** (primeira vez):
+Na pasta vagrant que está na barra de ferramentas, vá em "centos7-php56" e clique em "git-clone-all". Todas os repositórios pertencente à essa máquina serão clonados. Ao terminar, clique no atalho "up". Com isso a máquina virtual será iniciada. 
+Clique no HostSwitcher ao lado do relógio da barra de tarefas, vá em RMA e clique em Development. Acesse http://rma.oderco.com.br/ e você estará acessando o RMA em sua máquina conectada em desenvolvimento.
+Para usar o SourceTree, basta arrastar a pasta "rma" para dentro do programa (detalhes mais abaixo).
+
+###### Lista de atalhos:
+
+- **up**: Irá ligar a máquina virtual. Se for a primeira vez, ela será instalada.
+- **halt**: Irá desligar a máquina virtual. Assegure-se sempre desligar sua máquina antes de desligar o computador para que não ocorra problemas.
+- **reload**: Irá reiniciar sua máquina virtual.
+- **destroy**: Irá destruir a máquina, removendo ela do VirtualBox.
+- **full-provision**: Irá atualizar a Box do Vagrant, destruir a máquina e iniciar ela novamente. Utilizado quando existe atualização na Box, forçando o download dela novamente.
+- **ssh**: Irá acessar a máquina via ssh.
+- **git-clone-all**: Clonará todos os repositórios dos sistemas que rodam na respectiva máquina.
+- **git-remove-all**: Removerá todos os repositórios da respectiva máquina. Você terá que excluir manualmente a referência (bookmarks) do repositório no SourceTree.
+
+#### Utilizando o SourceTree
+
+Após os repositórios estarem clonados pelos atalhos do Vagrant, você terá que adicioná-los ao SourceTree. Para isso abra o SourceTree, clique no sinal de "mais" (+). Na tela que aparecer (New tab) arraste as pastas que estão dentro de D:\dev\centos7-php7 e D:\dev\centos7-php56. 
+
+Caso deseje clonar os repositórios sem utilizar o atalho do Vagrant, crie as pastas conforme mostrado na hierarquia acima. No SourceTree clique em + e depois em Clone. Coloque o endereço do repositório disponível no GitLab (exemplo: http://gitlab.oderco.com.br/ti/vagrant.git) em Source Path/ URL; Em Destination Path coloque selecione a pasta correta (exemplo D:\dev\vagrant); Clique em Clone.
+
+> **Importante**: Ao clonar um repositório, a branch a ser utilizada será o "develop". Recomendamos a utilização do Git Flow para criar e finalizar branchs (features). Antes de finalizar sua feature (mesclar sua branch para a develop), SEMPRE entre primeiro na na develop, de um pull, entre na sua branch, mescle a develop para sua branch, só assim finalize pelo Git Flow ou mescle sua branch para a develop.
+
+
+
