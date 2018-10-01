@@ -1,0 +1,25 @@
+
+Vagrant.configure(2) do |config|
+
+	config.vm.define "centos7-php56", autostart: true do |centos7php56|
+		
+		centos7php56.vm.box = 'centos7-php56'
+		centos7php56.vm.box_url = 'http://admin.oderco.com.br/downloads/vagrantbox/centos7php56.box'
+
+		centos7php56.vm.network :forwarded_port, guest: 80, host: 8082, auto_correct: true
+		centos7php56.vm.network :private_network, ip: '192.168.56.108'
+		centos7php56.vm.synced_folder 'D:/dev/centos7-php56', '/var/www/html', :mount_options => ['dmode=777', 'fmode=777'], type: "nfs"
+
+		centos7php56.vm.provision :shell, :path => 'config/centos7php56.sh'
+		centos7php56.vm.provision :shell, inline: "service httpd restart", run: "always"
+
+	end
+	
+	config.vm.provider :virtualbox do |centos7php56, override|
+
+		centos7php56.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+		centos7php56.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+
+	end
+
+end

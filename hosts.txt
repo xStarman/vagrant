@@ -1,0 +1,32 @@
+
+################################
+# centos7-php56                #
+################################
+
+rma.oderco.com.br rma.oderco.com.br # [RMA/Production]
+# 192.168.56.108 rma.oderco.com.br # [RMA/Development]
+
+salesforce.oderco.com.br salesforce.oderco.com.br # [SALESFORCE/Production]
+# 192.168.56.108 salesforce.oderco.com.br # [SALESFORCE/Development]
+
+services.oderco.com.br services.oderco.com.br # [SERVICES/Production]
+# 192.168.56.108 services.oderco.com.br # [SERVICES/Development]
+
+seguranca.oderco.com.br seguranca.oderco.com.br # [SEGURANCA/Production]
+# 192.168.56.108 seguranca.oderco.com.br # [SEGURANCA/Development]
+
+# api.odex.com.br api.odex.com.br # [API ODEX/Production]
+192.168.56.108 api.odex.com.br # [API ODEX/Development]
+
+intranet.odex.com.br intranet.odex.com.br # [INTRANET ODEX/Production]
+# 192.168.56.108 intranet.odex.com.br # [INTRANET ODEX/Development]
+
+################################
+# centos7-php7                 #
+################################
+
+oderco.com.br oderco.com.br # [MAGENTO/Production]
+# 192.168.56.110 oderco.com.br # [MAGENTO/Development]
+
+www.oderco.com.br www.oderco.com.br # [MAGENTO/Production]
+# 192.168.56.110 www.oderco.com.br # [MAGENTO/Development]
