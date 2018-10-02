@@ -163,24 +163,22 @@ After clone the repository the following folders will be at D:/, as the hierarch
 
 Then you can clone the repository as the links above or use file links into each folder in each VM in vagrant repository, who will clone esach folder into relative folder in the machine.
 
-Let's start! => TODO: continue the translation
+Let's start!
 -------------
 
-Primeiramente você precisará apenas criar a pasta D:\dev\vagrant e clonar o repositório utilizando o SourceTree (vide mais abaixo como fazer). Depois faça o seguinte:
+First of all you only need to crate D:\dev\vagrant folder and clone the repo using SourceTree (explained bellow) and then: 
 
-#### Utilizando o HostSwitcher
+#### Using HostSwitcher
 
-Abra o HostSwitcher, clique com o botão direito do mouse e selecione "Open HOSTS file". No arquivo que abrir, copie e cole no final o conteúdo de D:\dev\vagrant\hosts.txt, salve e feche.
+Open HostSwitcher executable, right click (tray icon) "Open HOSTS file". A txt file will be open, just copy and paste contents of D:\dev\vagrant\hosts.txt at the end and save.
 
-Ao clicar nele novamente, você verá os nomes dos sistemas os quais você poderá alternar para Development ou Production, bastando desse modo utilizar o mesmo DNS dos sistemas para acessá-los em ambos os ambientes.
+When you click on tray icon again you can see that now you have a few new submenus at top of context with Development and Production whitin each one. You can now switch thought different IPs using the same domain.
 
-#### Utilizando os Atalhos do Vagrant
+#### Vagrant Shortcuts
 
-Na barra de tarefas do Windows clique com o botão direito e vá em "Barra de ferramentas" e em "Nova barra de ferramentas...". Na tela que abrir selecione a pasta D:\dev\vagrant e clique em "Selecionar pasta". A pasta ficará de fácil acesso na barra de ferramentas.
+At system taskbar right click and then add new toolbar trought toolbar menu. In the new windows select D:\dev\vagrant folder and now you have easy access to shortcuts in the taskbar, clone and start machine
 
-Desse modo você poderá acessar os atalhos, clonar os repositórios e iniciar a máquina virtual.
-
-> **Exemplo** (primeira vez):
+> **Exemplo** (primeira vez): TO BE CONTINUED...
 Na pasta vagrant que está na barra de ferramentas, vá em "centos7-php56" e clique em "git-clone-all". Todas os repositórios pertencente à essa máquina serão clonados. Ao terminar, clique no atalho "up". Com isso a máquina virtual será iniciada. 
 Clique no HostSwitcher ao lado do relógio da barra de tarefas, vá em RMA e clique em Development. Acesse http://rma.oderco.com.br/ e você estará acessando o RMA em sua máquina conectada em desenvolvimento.
 Para usar o SourceTree, basta arrastar a pasta "rma" para dentro do programa (detalhes mais abaixo).
